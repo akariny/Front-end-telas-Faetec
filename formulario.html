@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="description" content="Uso Interno" >
+	<meta name="robots" content="nofollow" >
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style_form.css">
+</head>
+<header> <script src="./estados-e-municipios.js"></script></header>
+
+<!--Colocar placeholder em alguns campos | validação para aceitar somente numeros 
+inserir as opção do campo 'Etapa de Matricula' -->
+
+<body>
+	<nav class="navbar navbar-light bg-light">
+  		<div class="container-xl">
+    		<a class="navbar-brand" href="#">
+      			<img class="imglogo" src="img/faetec.png" alt="logo faetec">
+    		</a>
+  		</div>
+	</nav>
+
+	<form class="needs-validation formulario" novalidate>
+		<div class="container-fluid">
+			<section id="busca">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="hstack gap-3">
+  							<input class="form-control me-auto" type="text" placeholder="Buscar por CPF" >
+  							<!-- Colocar o tipo e a função do botão de busca -->
+ 							<button type="" class="btn btn-secondary">Buscar</button> 
+ 						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="hstack gap-3">
+  							<input class="form-control me-auto" type="text" placeholder="Buscar por número de inscrição" >
+  							<!-- Colocar o tipo e a função do botão de busca -->
+ 							<button type="" class="btn btn-secondary">Buscar</button> 
+ 						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="info-pessoal" class="background">
+				<h3>Informações Pessoais</h3>
+				<section>	
+					<div class="row">
+						<div class="col-md-4">
+							<label>Nome*</label>
+							<input class="form-control maiusculo" type="text" name="aluno" id="aluno" required="required">
+						</div>
+						<div class="col-md-2">
+							<label>Data de Nascimento*</label>
+							<input class="form-control maiusculo" type="text" id="datanasc" name="datanasc" required>
+						</div>
+						<div class="col-md-2">
+							<label>Sexo*</label>
+							<select class="form-control" id="sexo" name="sexo" required>
+								<option value="">Selecione</option>
+								<option value="1">Masculino</option>
+								<option value="2">Feminino</option>
+							</select>
+						</div>
+						<div class="col-md-2">
+							<label>Estado Civil*</label>
+								<select class="form-control" id="estadocivil" name="estadocivil" required="required" >
+								<option value="">Selecione</option>
+								<option value="1">Solteiro(a)</option>
+								<option value="2">Casado(a)</option>
+								<option value="3">Viuvo(a)</option>
+								<option value="4">Separado(a)</option>
+								<option value="5">Desquitado(a)</option>
+								<option value="6">Divorciado(a)</option>
+							</select>
+						</div>
+						<div class="col-md-2">
+							<label>Portador de Deficiência?</label>
+							<select class="form-control" id="portdef" name="portdef" required="">
+								<option value="">Selecione</option>
+								<option value="1">Auditiva</option>
+								<option value="2">Física</option>
+								<option value="3">Mental</option>
+								<option value="4">Visual</option>
+								<option value="5">Outra</option>
+							</select>
+						</div>
+					</div>
+
+					
+					<div class="row">
+						<div class="col-md-4">
+							<label>Mãe*</label>
+							<input class="form-control maiusculo" type="text" id="mae" name="mae" required="required">
+						</div>
+						<div class="col-md-4">
+							<label>Pai*</label>
+							<input class="form-control maiusculo" type="text" id="pai" name="pai" required="required">
+						</div>
+						<div class="col">
+							<label>E-mail</label>
+							<input class="form-control maiusculo" type="email" id="email" name="email">
+						</div>
+					</div>
+
+					<section class="js-estados-e-municipios">
+						<div class="row">
+							<div class="col-md-2">
+								<label>UF de Nascimento*</label>
+								<select class="js-estados form-control" data-value="" id="ufnasc" name="ufnasc" required="required"></select>
+							</div>
+							<div class="col-md-3">
+								<label>Municipio de Nascimento*</label>
+								<select class="js-municipios form-control" data-value="" id="municipionasc" name="municipionasc" required="required"></select>
+							</div>
+							<div class="col-md-3">
+								<label>Nacionalidade*</label>
+								<select class="form-control" id="nacionalidade" name="nacionalidade" required="required" >
+									<option value="">Selecione</option>
+									<option value="1">Brasileira</option>
+									<option value="2">Portuguesa</option>
+									<option value="3">Brasileiro Nascido no Exterior</option>
+									<option value="4">Brasileiro Naturalizado</option>
+									<option value="5">Estrangeiro</option>
+								</select>
+							</div>
+							<div class="col-md-2">
+								<label>Tel. Residencial</label>
+								<input class="form-control maiusculo" type="tel" id="telres" name="telres">
+							</div>
+							<div class="col-md-2">
+								<label>Celular</label>	
+								<input class="form-control maiusculo" type="tel" id="celres" name="celres">
+							</div>
+						</div>
+					</section>
+
+					<div class="row">
+						<div class="col-md-2">
+							<label>RG*</label>
+							<input class="form-control maiusculo" type="text" id="rg" name="rg" required="required">
+						</div>
+						<div class="col-md-2">
+							<label>Orgão Emissor*</label>
+							<input class="form-control maiusculo" type="text" id="orgemissor" name="orgemissor" required="required">
+						</div>
+						<div class="col-md-2">
+							<label>UF do RG*</label>
+							<input class="form-control maiusculo" type="text" id="ufrg" name="ufrg" required="required">
+						</div>
+						<div class="col-md-2">
+							<label>Tipo de Certidão*</label>
+							<select class="form-control" id="tipocertidao" name="tipocertidao" required="required">
+								<option value="">Selecione</option>
+								<option value="1">Nascimento</option>
+								<option value="2">Casamento</option>
+							</select>
+						</div>
+						<div class="col-md-2">
+							<label>Livro*</label>
+							<input class="form-control maiusculo" type="text" id="livro" name="livro" required="required">
+						</div>
+						<div class="col-md-2">
+							<label>Folha*</label>
+							<input class="form-control maiusculo" type="text" id="folha" name="folha" required="required">
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-2">
+							<label>Termo*</label>
+							<input class="form-control maiusculo" type="text" id="termo" name="termo" required="required">
+						</div>
+						<div class="col-md-2">
+							<label>UF da Certidão*</label>
+							<input type="text" class="form-control maiusculo" id="ufnasc" name="ufnasc" required="required">
+						</div>
+						<div class="col-md-3">
+							<label>Municipio de Cartorio*</label>
+							<input type="text" class="form-control maiusculo" id="municipionasc" name="municipionasc" required="required">
+						</div>
+						<div class="col-md-3">
+							<label>Distrito de Cartório*</label>
+							<input type="text" class="form-control maiusculo"  id="distrcartorio" name="distrcartorio" required="required">
+						</div>
+						<div class="col-md-2">
+							<label>Circunscrição</label>
+							<input class="form-control maiusculo" type="text" id="circunscricao" name="circunscricao">
+						</div>
+					</div>
+				</section>
+			</section>
+
+			<section id="endereco" class="background">
+				<h3>Endereço</h3>
+				<div class="row">
+					<div class="col-md-2">
+						<label>Tipo</label>
+						<input class="form-control maiusculo" type="text" id="tplograres" name="tplograres">
+					</div>
+					<div class="col-md-5">
+						<label>Logradouro</label>
+						<input class="form-control maiusculo" type="text" id="lograres" name="lograres">
+					</div>
+					<div class="col-md-2">
+						<label>Número</label>
+						<input class="form-control maiusculo" type="text" id="numerores" name="numerores">
+					</div>
+					<div class="col">
+						<label>Complemento</label>
+						<input class="form-control maiusculo" type="text" id="complres" name="complres">
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-3">
+						<label>UF</label>
+						<input type="text" class="form-control maiusculo" id="ufnasc" name="ufnasc" required="required">
+					</div>
+					<div class="col-md-3">
+						<label>Municipio</label>
+						<input type="text" class="form-control maiusculo" id="municipionasc" name="municipionasc" required="required">
+					</div>
+					<div class="col-md-3">
+						<label>Bairro</label>
+						<input class="form-control maiusculo" type="text" id="bairrores" name="bairrores">
+					</div>
+					<div class="col-md-3">
+						<label>CEP</label>
+						<input class="form-control maiusculo" type="text" id="cepres" name="cepres">
+					</div>
+				</div>
+			</section>
+
+			<section id="info-curso" class="background">
+				<h3>Informações do Curso</h3>
+				<div class="row">
+					<div class="col-md-3">
+						<label>Curso*</label>
+						<input class="form-control maiusculo" type="text" id="curso" name="curso" required="required">
+					</div>
+					<div class="col-md-2">
+						<label>Ano</label>
+						<input class="form-control maiusculo" type="text" id="ano" name="ano">
+					</div>
+					<div class="col-md-2">
+						<label>Série*</label>
+						<input class="form-control maiusculo" type="text" id="serie" name="serie" required="required">
+					</div>
+					<div class="col-md-3">
+						<label>Turno*</label>
+						<select class="form-control" id="turno" name="turno" required="required">
+							<option value="">Selecione</option>
+							<option value="1">Manhã</option>
+							<option value="2">Tarde</option>
+							<option value="3">Noite</option>
+							<option value="4">Intermediário</option>
+							<option value="5">Integral</option>
+						</select>	
+					</div>
+					<div class="col-md-2">
+						<label>Turma*</label>
+						<input class="form-control maiusculo" type="text" id="turma" name="turma" required="required">
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-3">
+						<label>Tipo de Curso*</label>
+						<select class="form-control" id="tpcurso" name="tpcurso" required="">
+							<option value="">Selecione</option>
+							<option value="1">Integrado</option>
+							<option value="2">Concomitância Interna</option>
+							<option value="3">Concomitância Externa</option>
+							<option value="4">Subsequente (Pós Médio)</option>
+						</select>
+					</div>
+					<div class="col-md-3">
+						<label>Modelo de Ensino*</label>
+						<select class="form-control" id="modensino" name="modensino" required="required">
+							<option value="">Selecione</option>
+							<option value="1">Educação Infantil</option>
+							<option value="2">Fundamental</option>
+							<option value="3">Ensino Médio</option>
+							<option value="4">Educação Jovens e Adultos</option>
+						</select>
+					</div>
+					<div class="col-md-3">
+						<label>Cota</label>
+						<input class="form-control maiusculo" type="text" id="cota" name="cota">
+					</div>
+					<div class="col-md-3">
+						<label>Classificação</label>
+						<input class="form-control maiusculo" type="text" id="classificacao" name="classificacao">
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col">
+						<label>Forma de Ingresso</label>
+						<input class="form-control maiusculo" type="text" id="formaingresso" name="formaingresso">
+					</div>
+					<div class="col-sm-5">
+						<label>Matricula DRE</label>
+						<input class="form-control maiusculo" type="text" id="numpedido" name="numpedido" readonly="readonly">
+					</div>
+					<div class="col">
+						<label>Etapa de Matricula</label>
+						<select class="form-control" id="etapamat" name="etapamat">
+							<option value="">Selecione</option>
+						</select>
+					</div>
+				</div>
+			</section>
+
+			<section id="botao" class="background">
+				<div class="row">
+					<div class="col">
+						<input class="btn btn-secondary btn lg" type="button" name="" value="Editar">
+						<input class="btn btn-secondary btn lg" type="reset" name="" value="Limpar">
+						<input class="btn btn-secondary btn lg" type="submit" name="" value="Salvar">
+						<input class="btn btn-secondary btn lg" type="submit" name="" value="Sair">	
+					</div>
+				</div>
+			</section>
+		</div>
+	</form>
+
+	<section id="rodape">
+		<div>
+			<footer>
+				<p>Desenvolvido por: ®DAIE</p>
+			</footer>
+		</div>
+	</section>
+	
+	
+	
+	<script type="text/javascript">
+		// Example starter JavaScript for disabling form submissions if there are invalid fields
+		(function () {
+  		'use strict'
+
+  		// Fetch all the forms we want to apply custom Bootstrap validation styles to
+  		var forms = document.querySelectorAll('.needs-validation')
+
+  		// Loop over them and prevent submission
+  		Array.prototype.slice.call(forms)
+    	.forEach(function (form) {
+      		form.addEventListener('submit', function (event) {
+        	if (!form.checkValidity()) {
+          	event.preventDefault()
+          	event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')}, false)
+    	})
+	})()
+	</script>
+	
+</body>
+</html> 

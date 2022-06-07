@@ -1,0 +1,96 @@
+body {
+	background-color: #4F80DD;
+	font-size: 0.8em; 
+}
+
+.imglogo {
+	height:40px; 
+	margin-left:8px; 
+	float:left;
+}
+
+.container-fluid {
+	margin-top: 1%;
+}
+
+.maiusculo {
+	text-transform: uppercase;
+}
+
+#busca {
+	background-color: rgba(255,255,255, 0.8);
+	padding: 10px 30px 15px 30px;
+
+}
+
+.background {
+	background-color: rgba(255,255,255, 0.8);
+	padding:  1px 30px 15px 30px;
+}
+
+#botao {
+	padding-top: 10px;
+	text-align: center;
+}
+
+#rodape {
+	/*background-color: purple;*/
+	margin-top: 10px;
+	text-align: center;
+	color: #ffff;	
+}
+
+.mx-auto {
+	width: 900px
+	padding: 5px;
+	border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+	h3 {
+		font-size: 20px;
+	}
+
+	.imglogo {
+		margin: 0;
+	}
+
+	#info-pessoal {
+		width: 100%
+	}
+
+	#info-curso {
+		width: 100%
+	}
+
+	.btn {
+		margin: 2px;
+		font-size: 13px;
+	}
+}
+
+@media (max-width: 455px) {
+	h3 {
+		font-size: 15px;
+	}
+	label {
+		font-size: 10px;
+		width: 100%
+	}
+
+	.imglogo {
+		margin: 0;
+	}
+
+	.info {
+		width: 100%
+	}
+
+	.btn {
+		margin: 2px;
+		font-size: 8px;
+	}
+}
+
+
+
